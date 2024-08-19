@@ -1,0 +1,433 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition:all 0.5s linear;
+    scroll-behavior: smooth;
+    font-size: 25px;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    padding-top: 10px;
+    background-color: rgb(232,232,232);
+}
+
+.logo h1{
+    font-size: 28px;    
+    font-weight: 25px;
+    margin-left: 130px;
+}
+.logo h1 span{
+    color: rgb(69, 151, 251);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 240px;
+    z-index: 1000;
+    color: black;
+    width: 100%;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+    
+}
+nav ul li a{
+    font-size: 18px;
+    font-weight: 50px;
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    text-decoration:underline ;
+    /* lighting-color: rgb(254,97,56)  ;*/
+}
+nav .btn {
+    font-size: 17px;
+    font-weight: 15px;
+    background: none;
+    border: none;
+    margin-left: 150px;
+    background-color:rgb(58, 140, 254);
+    margin-left: 10px;
+    padding: 10px 25px /*10px 25px*/;
+    border-radius: 5px;
+    color: white;
+}
+.cart{
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    width: 80px;
+}
+nav ul li a i{
+    padding: 5px;
+    overflow: hidden;
+
+}
+
+#menu-bar{
+    color: black;
+    border: .1rem solid rgb(0, 0, 0);
+    margin-right: 0.51rem;
+    margin-top: 22px;
+    border-radius: 0.5rem;
+    font-size: 22px;
+    font-weight: 20px;
+    padding:8px 25px;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*form*/
+.home {
+   /* position: relative;
+    height: 100vh;
+    width: 100%;*/
+    background-image: url(./backimage.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*form*/
+.form_container {
+position: fixed;
+max-width: 320px;
+width: 100%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+z-index: 101;
+background: #fff;
+padding: 25px;
+border-radius: 12px;
+box-shadow: rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.4s ease-out;
+}
+.home.show .form_container {
+opacity: 1;
+pointer-events: auto;
+transform: translate(-50%, -50%) scale(1);
+}
+.signup_form {
+display: none;
+}
+.form_container.active .signup_form {
+display: block;
+}
+.form_container.active .login_form {
+display: none;
+}
+.form_container .form_close {
+position: absolute;
+top: 10px;
+right: 20px;
+color: #0b0217;
+font-size: 22px;
+opacity: 0.7;
+cursor: pointer;
+}
+.form_container .button:hover{
+background-color: rgb(47, 132, 251);
+}
+.form_container h2 {
+font-size: 22px;
+color: #0b0217;
+text-align: center;
+}
+.input_box {
+position: relative;
+margin-top: 30px;
+width: 100%;
+height: 40px;
+}
+.input_box input {
+height: 100%;
+width: 100%;
+border: none;
+outline: none;
+padding: 0 30px;
+font-size: 15px;
+color: #333;
+transition: all 0.2s ease;
+border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+border-color: rgb(47, 132, 251);
+}
+.input_box i {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #707070;
+}
+.input_box i.email,
+.input_box i.password {
+left: 0;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+color: rgb(47, 132, 251);
+}
+.input_box i.pw_hide {
+right: 0;
+font-size: 22px;
+cursor: pointer;
+}
+.option_field {
+margin-top: 14px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.form_container a {
+color:rgb(47, 132, 251);
+font-size: 12px;
+}
+.form_container a:hover {
+text-decoration: underline;
+}
+.checkbox {
+display: flex;
+column-gap: 8px;
+white-space: nowrap;
+}
+.checkbox input {
+accent-color:rgb(47, 132, 251);
+}
+.checkbox label {
+font-size: 12px;
+cursor: pointer;
+user-select: none;
+color: #0b0217;
+}
+.form_container .button {
+background: rgb(10, 79, 176);
+margin-top: 30px;
+width: 100%;
+padding: 10px 0;
+font-size: 15px;
+border-radius: 10px;
+color: white;
+}
+.login_signup {
+font-size: 12px;
+text-align: center;
+margin-top: 15px;
+}
+/*cart display*/
+
+.container {
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    margin-left: 17.9rem;
+}
+#root {
+    margin-top: 15px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.sidebar {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head {
+    background-color: rgb(58, 140, 254);
+    border-radius: 3px;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(58, 140, 254);
+    border-radius: 5px;
+    padding: 15px;
+}
+.img-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images {
+    max-width: 90%;
+    max-height: 90%;
+    object-position: center;
+}
+.bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2 {
+    font-size: 20px;
+    color: black;
+}
+button {
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(58, 140, 254);
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+button:hover {
+    background-color: rgb(117, 174, 255);
+}
+.cart-item button{
+    width: 20%;
+    padding: 7px 5px;
+    font-size: 15px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(58, 140, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg {
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+
+@media (max-width:990px){
+    *{
+        scroll-behavior: smooth;
+    }
+    #menu-bar{
+        margin-top: 100px;
+        margin-right: 15%;
+        display: block;
+    } 
+    .logo h1{
+        padding-top: 50px;
+        padding-bottom: 25px;
+        padding-left:20px;
+        margin-left: 5px;
+        color: white;
+    } 
+    .logo h1 span{
+        color: rgb(69, 151, 251);
+    }
+    nav{
+        margin: 5px 60px;
+        width: 100%;
+        top: 100%;
+    }
+    header{
+        color: white;
+        background-color:  rgb(177, 117, 102);        
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        height: fit-content;
+    }
+    header .middel {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        background: #a79f9f;
+        color: white;
+        border-top: .1rem solid rgba(255,255,255,0.2);
+        padding: 1rem  2rem;
+        clip-path: polygon(0 0, 100% 0, 100%, 0 0);
+        z-index: 9999;
+        
+    }
+    header .middel.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        display: block;
+        color: white;
+        background-color:  rgb(145, 87, 72);
+    }
+    header .middel ul li {
+        display: block;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        margin: 1.5rem 0;
+        
+    }
+    header .middel ul li a{
+        color: white;
+        font-size: 20px;
+    }
+    nav ul li .btn{
+        margin-right: 3rem;
+        border: none;
+        font-size: 20px;
+        background-color:  rgb(181, 128, 115);    
+    }
+
+}
